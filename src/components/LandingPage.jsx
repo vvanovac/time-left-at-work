@@ -1,6 +1,7 @@
 import { Box, useTheme } from '@mui/material';
-import Progress from './Progress.jsx';
 import Header from './Header.jsx';
+import MainContainer from './MainContainer.jsx';
+import Progress from './Progress.jsx';
 
 export default function LandingPage() {
   const theme = useTheme();
@@ -14,7 +15,9 @@ export default function LandingPage() {
       }}
     >
       <Header />
-      <Progress />
+      <MainContainer>
+        <Progress />
+      </MainContainer>
     </Box>
   );
 }

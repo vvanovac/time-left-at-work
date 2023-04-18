@@ -53,9 +53,19 @@ export const theme = createTheme({
       },
     },
     text: {
-      primary: '#CCD6E5',
-      secondary: '#7892BA',
-      disabled: '#F2F4F8',
-    }
+      dark: {
+        primary: '#CCD6E5',
+        secondary: '#7892BA',
+        disabled: '#F2F4F8',
+      },
+      light: {
+        primary: '#0E131B',
+        secondary: '#1C2636',
+        disabled: '#7A8FB8',
+      },
+    },
+  },
+  shape: {
+    borderRadius: 8,
   },
 });

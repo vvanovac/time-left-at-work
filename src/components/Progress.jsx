@@ -14,37 +14,32 @@ export default function Progress() {
     >
       <Typography
         variant="h3"
-        color={theme.palette.text.primary}
+        color={theme.palette.text[theme.palette.mode].primary}
         sx={{
-          marginTop: 8,
-          marginBottom: 2,
+          marginTop: 2,
+          marginBottom: 4,
           fontSize: {
             xs: 36,
             sm: 40,
             md: 48,
-            lg: 48,
           },
         }}
       >
-        Working Hours progress
+        Elapsed Time
       </Typography>
       <LinearProgress
         variant="determinate"
         value={80}
         color="primary"
         sx={{
-          width: {
-            xs: '90%',
-            md: '80%',
-            lg: '75%',
-          },
+          width: '100%',
           height: {
             xs: 48,
             sm: 56,
             md: 64,
             lg: 72,
           },
-          borderRadius: 7,
+          borderRadius: `${theme.shape.borderRadius * 7}px`,
         }}
       />
     </Box>

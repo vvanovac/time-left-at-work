@@ -1,6 +1,7 @@
 import { AppBar, Box, Button, useTheme } from '@mui/material';
 
 const APP_BAR_HEIGHT = 75;
+const BUTTONS_HEIGHT = 45;
 
 export default function Header() {
   const theme = useTheme();
@@ -10,7 +11,7 @@ export default function Header() {
       position="static"
       sx={{
         background: theme.palette.background[theme.palette.mode].default,
-        boxShadow: 'none',
+        boxShadow: 2,
         height: APP_BAR_HEIGHT,
       }}
     >
@@ -35,14 +36,14 @@ export default function Header() {
           <Button
             variant="contained"
             color="primary"
-            sx={{ height: 45 }}
+            sx={{ height: BUTTONS_HEIGHT }}
           >
             Hours Settings
           </Button>
           <Button
             variant="outlined"
             color="primary"
-            sx={{ height: 45 }}
+            sx={{ height: BUTTONS_HEIGHT }}
           >
             Theme Settings
           </Button>
