@@ -26,7 +26,7 @@ export default function Progress() {
           },
         }}
       >
-        Working Hours progress &#8987;
+        Working Hours progress
       </Typography>
       <LinearProgress
         variant="determinate"

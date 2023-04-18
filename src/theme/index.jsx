@@ -15,11 +15,11 @@ export const theme = createTheme({
     background: {
       dark: {
         paper: '#1B2636',
-        default: '#293851',
+        default: '#1E293B',
       },
       light: {
         paper: '#D7DFEA',
-        default: '#F2F4F8',
+        default: '#E2E8F0',
       },
     },
     divider: {
