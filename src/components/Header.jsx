@@ -1,10 +1,18 @@
-import { AppBar, Box, Button, useTheme } from '@mui/material';
+import { useState } from 'react';
+import { AppBar, Box, Button, Modal, useTheme } from '@mui/material';
+import ThemeSettings from './ThemeSettings.jsx';
 
 const APP_BAR_HEIGHT = 75;
 const BUTTONS_HEIGHT = 45;
 
 export default function Header() {
   const theme = useTheme();
+
+  const [ openThemeSettingsModal, setOpenThemeSettingsModal ] = useState(false);
+
+  const handleOpenThemeSettingsModal = () => setOpenThemeSettingsModal(true);
+
+  const handleCloseThemeSettingsModal = () => setOpenThemeSettingsModal(false);
 
   return (
     <AppBar
@@ -44,11 +52,33 @@ export default function Header() {
             variant="outlined"
             color="primary"
             sx={{ height: BUTTONS_HEIGHT }}
+            onClick={handleOpenThemeSettingsModal}
           >
             Theme Settings
           </Button>
         </Box>
       </Box>
+      <Modal
+        open={openThemeSettingsModal}
+        onClose={handleCloseThemeSettingsModal}
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Box
+          sx={{
+            width: '90%',
+            maxWidth: 600,
+            backgroundColor: theme.palette.background[theme.palette.mode].default,
+            borderRadius: `${theme.shape.borderRadius}px`,
+            p: 3,
+          }}
+        >
+          <ThemeSettings />
+        </Box>
+      </Modal>
     </AppBar>
   );
 }
