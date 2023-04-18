@@ -11,9 +11,16 @@ export const theme = createTheme({
     },
   },
   palette: {
+    mode: 'dark',
     background: {
-      dark: '#1E293B',
-      light: '#E2E8F0',
+      dark: {
+        paper: '#1B2636',
+        default: '#293851',
+      },
+      light: {
+        paper: '#D7DFEA',
+        default: '#F2F4F8',
+      },
     },
     divider: {
       dark: '#E2E8F0',
@@ -45,5 +52,10 @@ export const theme = createTheme({
         contrastText: '#000000',
       },
     },
+    text: {
+      primary: '#CCD6E5',
+      secondary: '#7892BA',
+      disabled: '#F2F4F8',
+    }
   },
 });
