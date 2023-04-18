@@ -1,10 +1,13 @@
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import { theme } from './theme/index';
 import './App.css'
 
 export default function App() {
   return (
     <>
-      <h1>Hello world!</h1>
-      <h2>Hello world!</h2>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+      </ThemeProvider>
     </>
   );
 }
