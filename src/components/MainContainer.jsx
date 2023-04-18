@@ -16,7 +16,7 @@ export default function MainContainer({ children }) {
           boxShadow: 3,
           borderRadius: `${theme.shape.borderRadius}px`,
           backgroundColor: theme.palette.background[theme.palette.mode].default,
-          height: '65vh',
+          height: '50vh',
           width: '90%',
           maxWidth: 1150,
           paddingTop: 2,
